@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block title %}Sweet Stack{% endblock %}</title>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=DM+Sans:wght@400;500;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body>
+<header class="nav"><div class="wrap">
+<a href="{{ url_for('index') }}" class="brand"><img class="logo" src="{{ url_for('static', filename='img/bear1.png') }}" alt="">sweet stack</a>
+<nav>
+<a href="{{ url_for('index') }}">Home</a><a href="{{ url_for('profile') }}">Profile</a>
+<a href="{{ url_for('works') }}">UP-UP Hooray</a><a href="{{ url_for('acircle') }}">Go Round</a>
+<a href="{{ url_for('atriangle') }}">Triangle</a><a href="{{ url_for('linked_list') }}">Notes</a>
+<a href="{{ url_for('contact') }}">Contact</a></nav></div></header>
+<main>{% block content %}{% endblock %}</main>
+<footer class="foot"><div class="bearrow"><img src="{{ url_for('static', filename='img/bear1.png') }}" alt=""><img src="{{ url_for('static', filename='img/bear2.png') }}" alt=""><img src="{{ url_for('static', filename='img/bear3.png') }}" alt=""><img src="{{ url_for('static', filename='img/bear4.png') }}" alt=""></div>© 2026 Sweet Stack by {{ profile.name }} · School project</footer>
+</body></html>

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Contact | Sweet Stack{% endblock %}
+{% block content %}
+<section class="page paper"><div class="wrap"><div class="sheet"><img class="stk n1" src="{{ url_for('static', filename='img/bunny.png') }}" alt=""><img class="stk n2" src="{{ url_for('static', filename='img/bear1.png') }}" alt="">
+<span class="tag">CONTACT</span><h1>Let's connect</h1>
+<div class="details">
+<p><b>Name:</b> {{ profile.name }}</p><p><b>Email:</b> {{ profile.email }}</p>
+<p><b>Phone:</b> {{ profile.phone }}</p><p><b>Location:</b> {{ profile.location }}</p></div>
+</div></div></section>
+{% endblock %}

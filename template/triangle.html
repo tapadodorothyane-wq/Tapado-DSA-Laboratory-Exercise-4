@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Triangle Area | Sweet Stack{% endblock %}
+{% block content %}
+<section class="page paper"><div class="wrap"><div class="sheet"><img class="stk n1" src="{{ url_for('static', filename='img/jelly.png') }}" alt=""><img class="stk n2" src="{{ url_for('static', filename='img/bear4.png') }}" alt="">
+<span class="tag">MINI EXERCISE</span><h1>Triangle Area</h1><p class="formula">A = ½ × base × height</p>
+<form method="POST" class="stack"><label for="base">Base</label>
+<input type="number" step="any" id="base" name="base" value="{{ base }}" placeholder="Enter base">
+<label for="height">Height</label>
+<input type="number" step="any" id="height" name="height" value="{{ height }}" placeholder="Enter height">
+<button class="btn red" type="submit">Calculate</button></form>
+{% if result is not none %}<div class="out">Area: {{ result }}</div>{% endif %}
+</div></div></section>
+{% endblock %}

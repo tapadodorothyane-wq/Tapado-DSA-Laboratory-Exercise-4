@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Home | Sweet Stack{% endblock %}
+{% block content %}
+<section class="hero paper"><div class="wrap">
+<div>
+<p class="small">(A school project on data structures &amp; algorithms)</p>
+<h1>The Data Structure Cart of Your Dreams</h1>
+<p class="lead">Pick a structure, see how it stores things, and learn how fast it works. Then try the code yourself.</p>
+<a class="btn" href="{{ url_for('works') }}">Try the code</a><span class="note">pick a jar!</span></div>
+<div class="cartwrap"><img class="bear b1" src="{{ url_for('static', filename='img/bear2.png') }}" alt=""><img class="bear b2" src="{{ url_for('static', filename='img/bear4.png') }}" alt=""><div class="cart"><div class="awning"></div>
+<div class="jars">
+<div class="jar"><b>[ ]</b>Array</div><div class="jar"><b>●→●</b>Linked list</div><div class="jar"><b>▤</b>Stack</div>
+<div class="jar"><b>⇉</b>Queue</div><div class="jar"><b>⑂</b>Tree</div><div class="jar"><b>⌁</b>Graph</div>
+</div></div></div></div></section>
+
+<section class="striped"><div class="wrap striped-row"><div class="panel">
+<h2>What is DSA?</h2>
+<p>Data structures are ways to organize data, like lists, stacks and trees. Algorithms are the steps that work with that data, like searching and sorting. Together, they help programs stay organized and run faster.</p>
+<p class="after">This site is my school project, with working examples you can try. Want to know who made it?</p>
+<a class="btn red" href="{{ url_for('profile') }}">Meet the student</a>
+</div><img class="miffy" src="{{ url_for('static', filename='img/miffy.png') }}" alt="Cute bunny with a pink bow"></div></section>
+<div class="checker"></div>
+
+<section class="lav"><div class="wrap"><div class="scallop"><img class="stk s1" src="{{ url_for('static', filename='img/bunny.png') }}" alt=""><img class="stk s2" src="{{ url_for('static', filename='img/strawberry.png') }}" alt="">
+<span class="tag">WORKING EXAMPLES</span>
+<h2>Join the Code Club</h2>
+<p>Four small programs, all written in Python with Flask.</p>
+<div class="links">
+<a class="btn dark" href="{{ url_for('works') }}">Uppercase text</a>
+<a class="btn dark" href="{{ url_for('acircle') }}">Go Round</a>
+<a class="btn dark" href="{{ url_for('atriangle') }}">Triangle area</a>
+<a class="btn dark" href="{{ url_for('linked_list') }}">Notes list</a></div>
+</div></div></section>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}UP-UP Hooray | Sweet Stack{% endblock %}
+{% block content %}
+<section class="page paper"><div class="wrap"><div class="sheet"><img class="stk n1" src="{{ url_for('static', filename='img/cat.png') }}" alt=""><img class="stk n2" src="{{ url_for('static', filename='img/bear3.png') }}" alt="">
+<span class="tag">STRING EXERCISE</span><h1>Uppercase Maker</h1>
+<p class="formula">text.upper()</p>
+<form method="POST" class="stack">
+<label for="inputString">Type a word</label>
+<input type="text" id="inputString" name="inputString" placeholder="e.g. candy" autocomplete="off">
+<button class="btn red" type="submit">Make uppercase</button></form>
+{% if result is not none %}<div class="out">{{ result if result else 'Type a word first.' }}</div>{% endif %}
+<div class="links" style="justify-content:flex-start">
+<a class="btn" href="{{ url_for('acircle') }}">Go Round</a><a class="btn" href="{{ url_for('atriangle') }}">Triangle</a><a class="btn" href="{{ url_for('linked_list') }}">Notes list</a></div>
+</div></div></section>
+{% endblock %}

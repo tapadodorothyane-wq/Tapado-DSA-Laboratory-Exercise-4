@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Notes List | Sweet Stack{% endblock %}
+{% block content %}
+<section class="page paper"><div class="wrap"><div class="sheet wide"><img class="stk n1" src="{{ url_for('static', filename='img/whale.png') }}" alt=""><img class="stk n2" src="{{ url_for('static', filename='img/icecream.png') }}" alt="">
+<span class="tag">LINKED LIST DEMO</span><h1>Notes List</h1>
+<form method="POST" class="row"><input type="hidden" name="action" value="add"><input type="text" name="value" placeholder="Add a note" aria-label="Note to add"><button class="btn red" type="submit">Add</button></form>
+<form method="POST" class="row"><input type="hidden" name="action" value="delete"><input type="text" name="value" placeholder="Remove a note" aria-label="Note to remove"><button class="btn dark" type="submit">Delete</button></form>
+<form method="POST" class="row"><input type="hidden" name="action" value="clear"><button class="btn" type="submit">Clear all</button></form>
+{% if message %}<div class="out">{{ message }}</div>{% endif %}
+<h3 style="margin-top:1.4rem">Current notes</h3>
+{% if linked_list %}<ul class="chips">{% for item in linked_list %}<li>{{ item }}</li>{% endfor %}</ul>
+{% else %}<img class="stk n3 inline" src="{{ url_for('static', filename='img/cat.png') }}" alt=""><p>The list is empty. Add a note above.</p>{% endif %}
+</div></div></section>
+{% endblock %}

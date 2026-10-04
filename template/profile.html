@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Profile | Sweet Stack{% endblock %}
+{% block content %}
+<section class="page paper"><div class="wrap"><div class="sheet wide"><img class="stk n1" src="{{ url_for('static', filename='img/heart.png') }}" alt=""><img class="stk n2" src="{{ url_for('static', filename='img/bear3.png') }}" alt=""><div class="profile">
+<div class="photo">Add your photo as static/profile.png<img src="{{ url_for('static', filename='profile.png') }}" alt="Profile photo of {{ profile.name }}" onerror="this.remove()"></div>
+<img class="chii c1" src="{{ url_for('static', filename='img/chiikawa1.png') }}" alt="Chiikawa holding a bouquet">
+<div class="info">
+<span class="tag">STUDENT PROFILE</span>
+<h1>{{ profile.name }}</h1><p>{{ profile.title }}</p>
+<h3>About me</h3><p>{{ profile.about }}</p>
+<h3>Education</h3><p>{{ profile.education }}</p>
+<h3>Interests</h3><ul class="chips">{% for i in profile.interests %}<li>{{ i }}</li>{% endfor %}</ul>
+<img class="chii c2" src="{{ url_for('static', filename='img/chiikawa2.png') }}" alt="Chiikawa dressed as ice cream">
+<div class="details"><p><b>Location:</b> {{ profile.location }}</p></div>
+</div></div></div></div></section>
+{% endblock %}

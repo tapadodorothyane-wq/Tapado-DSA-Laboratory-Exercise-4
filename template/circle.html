@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Go Round | Sweet Stack{% endblock %}
+{% block content %}
+<section class="page paper"><div class="wrap"><div class="sheet"><img class="stk n1" src="{{ url_for('static', filename='img/flower.png') }}" alt=""><img class="stk n2" src="{{ url_for('static', filename='img/bear2.png') }}" alt="">
+<span class="tag">CIRCLE AREA</span><h1>Go Round</h1><p class="formula">A = πr²</p>
+<form method="POST" class="stack"><label for="radius">Radius</label>
+<input type="number" step="any" id="radius" name="radius" value="{{ radius }}" placeholder="Enter radius">
+<button class="btn red" type="submit">Calculate</button></form>
+{% if result is not none %}<div class="out">Area: {{ result }}</div>{% endif %}
+</div></div></section>
+{% endblock %}
